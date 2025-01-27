@@ -145,3 +145,50 @@ Right click on the DC server and click "authorize"/ Right click on it again and 
 <p align="center">
 to make life a little easier for us on this lab we're going to turn off internet explorer security, by doing that go to "config local server" on the SM-dashboard/ Click "on" next to "IE Enhanced Security Configuration" turn them off, then click "OK".<br/>
 <img src="https://i.imgur.com/9HblfYH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+Next we will be using a command script on powershell to automate 1000 user accounts.<br/>
+<p align="center">
+Open up internet explorer/ Paste this Link in - (https://github.com/joshmadakor1/AD_PS/archive/master.zip) / Click "save as"/ Select "desktop"/ Click "Save"/ Go to desktop and right click the file/ Click "Extract"/ Open the folder and double click "names"/ Add you first and last name to the top of the list then save the file. <br/>
+<img src="https://i.imgur.com/fMZPIQW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/dCk8URD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/S7mRGuU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/CpYhi2u.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+Click on the start menu/ click on powershell/ Find Powershell ISE then right click on it/ Click "more then click "run as admin."/ find the folder icon on the top right of powershell and click it/ go to desktop/ find the folder we downloaded earlier and click it/ Click on the file named "CREATE USERS" then click "Open".<br/>
+<img src="https://i.imgur.com/v0GpUIc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/oae5pzs.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Lm3TLIB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+We wont be able to run the script just yet because of the execution policy so enter the command "Set-ExecutionPolicy Unrestricted"/ MAke sure you type in the command correctly or it wont work/ a small window should pop up asking are you sure, just click "yes"/ This is a lab so its not that important but in real world environments It would be very important so keep that in mind.<br/>
+<img src="https://i.imgur.com/l1diZh4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+Another thing we have to do before running the script to make it work is doing to the directory that has the list of names/ enter command "cd c:\Users\a-aglazier\Desktop\AD_PS-master"/ Command "ls" to see if the "names.txt" files is there/ Now we can click the green arrow at the top of the powershell to run the script.<br/>
+<img src="https://i.imgur.com/dMhJQhq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/P67vMGa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+After the script is finiosh running if you go to Active Directory Users and Computers you should see a new users Ou filled with users.<br/>
+<img src="https://i.imgur.com/kOYaKMX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ziECymT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+Lets go back to Virtual box and create a new VM/ CLick "New"/ Name "CLIENT1"/ Type "Microsoft Windows"/ Version "windows 10 (64-bit)"/ Click "Finish"/ Double click the "CLIENT1" VM/ Click "Settings"/ Click "Network"/ Change Attached to: to "Internal Network"/ Click "OK"/ Start the VM/ Click the dropdown tab on DVD and select "other"/ Find the windows 10 ISO we downloaded earlier and click "Open"/ Click "mount and retry boot".<br/>
+<img src="https://i.imgur.com/arvHRbD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/HLRlDJj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/RZnTHYw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+Select "English" or preferred language then click "Next"/ Click "Install now"/ Click "I dont have a product key"/ Select "Windows 10 Pro" then click "Next"/ Accept the licewnse then click "Next"/ Select "Custom install windows only"/ Click "Next"<br/>
+<img src="https://i.imgur.com/PkCrq6D.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/AlcmcOU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/0GAaJqu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/NkaUwEZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+When it finishes installing click "Next"/ Click "yes"/ Click "Skip"/ Click "i dont have internet"/ Click "Continue with limited setup"/ For name pt "user"/ Click "next"/ Click "Next"/ Turn all the settings to "no" then click "accept"/ Click "not now"/ Go to command prompt and type in "ipconfig"  <br/>
+
+
