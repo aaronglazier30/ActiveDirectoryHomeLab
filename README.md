@@ -98,7 +98,50 @@ Lets Create a Domain-AD DS/ Go to the Sewrver manager dashboard/ Click "Add role
 <img src="https://i.imgur.com/FDJI5sN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <p align="center">
-We're going to create a dedicated admin account now/ <br/>
+We're going to create a dedicated admin account now/ After you log back in clicl the start menu/ Click "administrator tools"/ Then click "Active Directory users and computers"/ Richt click "mydomain.com"/ Click "New"/ Click "Organizational Unit" aka "OU"/ For the name type in "Admins"/ Click "OK"/ Right click on the "admins" OU we just made/ Click "New"/ Click "Users"/ Type in your first and last name in designated spots/ For User Logon Name put "a-" to signify you're a admin user followed by first letter of first name and last name/ Click "Next"/ For Password: "Password1" and uncheck the box saying "user must change password at next logon" (for lab purposes only)/ Click "Next"/ Click "Finish"<br/>
+<img src="https://i.imgur.com/WEwZczD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/2iHWtjI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/kEMvvai.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/MSeF6z1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/1WMq8Ov.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+<p align="center">
+Right click the user account we just made in the "admins" OU/ Click "Properties"/ Click "Members of"/ Click "Add"/ Enter "Domain Admins" int the text box/ Click "Check Names" and "Domain Admins" should be underlined now/ Click "OK"/ Click "Apply and "OK"/ Now Click "Start"/ Click the account profile icon/ Click "sign out" <br/>
+<img src="https://i.imgur.com/XPaUJTU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/CWFr3um.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/xLySIuS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+<p align="center">
+We're going to login on "other users" and use the login info of the admin account we just made/ User: a-aglazier PW: Password1/ Boom! LETS GO! <br/>
+<img src="https://i.imgur.com/yTFyOsE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/QBmdNVa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+<p align="center">
+Now lets allow access for the client to access the internet through the DC by creating a RAS-NAT/ Go to Server Manager-Dashboard/ Click "Add roles and feautures"/ Click "Next"/ Click "Next"/ Click "Next"/ Select "Remote Access"/ Click "Next"/ Click "Next"/ Click "Next"/ Select "Routing"/ Click "Add Feautures"/ Click "Next"/ Click "Next"/ Click "Next"/ Click "Install"/ Close once it finishes installing.<br/>
+<img src="https://i.imgur.com/h9slytb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/6ery6Wj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+Go to tools on the SM-Dashboard/ Select "Routing and remote access"/ Right click "DC"/ Click "configure and enable routing and remote access"/ Click "next"/ Select "Network address traslation (NAT)"/ Click "next"/ Use the public interface and select the Network we named "_Internet_". IP address starting in '10.'/ Click "Next"/ Click "Finish"<br/>
+<img src="https://i.imgur.com/nOQwlFT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/6Tx2fWX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+Next on the to do list is setting up a DHCP server on our domain controller with scope information allowing our windows 10 clients to get on the internet within a private internal network.<br/>
+<p align="center">
+Go to SMdashboard/ Click "add roles and feautures"/ Click "Next"/ Click "Next"/ Click "Next"/ Under server roles select "DHCP Server" and "add Feautures"/ Click "Next"/ Click "Next"/ Click "Next"/ Click "Install"/ Go to SM-dashboard "tools"/ Select "DHCP"/ Click and then right click on "IPv4"/ Click "Use Scope"/ Put name as scope range from the diagram in the beginning (172.16.0.100-200)/ Click "Next"/ Enter these IP addresses accordingly; start IP: 172.16.0.100, End IP: 172.16.0.200, Subnet mask: 255.255.255.0/ Click "Next"/ Enter the IP range again and Click "add"/ Click "Next"/ For lease dura tion we will leave it alone because this is a lab but this is basically asking what is the duration you want for a client to have a single IP address/ Make sure yes is selected for DHCP config. options for the scope, then click "Next"/ Enter IP address: 172.16.0.1, Click "add" then click "Next"/ Click "Next"/ Click "Next"/ Click "Next"/ Click "Finish" <br/>
+<img src="https://i.imgur.com/FWA4lsj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/vnQBW7G.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/2Revn03.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/T1JPdHB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/kVbIH1H.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/p8fOWa8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+Right click on the DC server and click "authorize"/ Right click on it again and click "refresh". <br/>
+<img src="https://i.imgur.com/pp9LYrc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/uyFNIag.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+to make life a little easier for us on this lab we're going to turn off internet explorer security, by doing that go to "config local server" on the SM-dashboard/ Click "on" next to "IE Enhanced Security Configuration" turn them off, then click "OK".<br/>
+<img src="https://i.imgur.com/9HblfYH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
