@@ -149,10 +149,8 @@ to make life a little easier for us on this lab we're going to turn off internet
 <p align="center">
 Next we will be using a command script on powershell to automate 1000 user accounts.<br/>
 <p align="center">
-Open up internet explorer/ Paste this Link in - (https://github.com/joshmadakor1/AD_PS/archive/master.zip) / Click "save as"/ Select "desktop"/ Click "Save"/ Go to desktop and right click the file/ Click "Extract"/ Open the folder and double click "names"/ Add you first and last name to the top of the list then save the file. <br/>
+Open up internet explorer/ Paste this Link in - (https://github.com/joshmadakor1/AD_PS/archive/master.zip) / Click "save as"/ Select "desktop"/ Click "Save"/ Go to desktop and right click the file/ open the file and drag the content out to the desktop/ Open the folder and double click "names"/ Add you first and last name to the top of the list then save the file. <br/>
 <img src="https://i.imgur.com/fMZPIQW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/dCk8URD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/S7mRGuU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/CpYhi2u.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <p align="center">
