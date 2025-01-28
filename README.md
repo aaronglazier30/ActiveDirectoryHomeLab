@@ -187,6 +187,21 @@ Select "English" or preferred language then click "Next"/ Click "Install now"/ C
 <img src="https://i.imgur.com/NkaUwEZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <p align="center">
-When it finishes installing click "Next"/ Click "yes"/ Click "Skip"/ Click "i dont have internet"/ Click "Continue with limited setup"/ For name pt "user"/ Click "next"/ Click "Next"/ Turn all the settings to "no" then click "accept"/ Click "not now"/ Go to command prompt and type in "ipconfig"  <br/>
+When it finishes installing click "Next"/ Click "yes"/ Click "Skip"/ Click "i dont have internet"/ Click "Continue with limited setup"/ For name pt "user"/ Click "next"/ Click "Next"/ Turn all the settings to "no" then click "accept"/ Click "not now"/ Go to command prompt and type in "ipconfig" to verify connection/ Right click thestart menu/ Click "Rename this PC(advanced)"/ Click "Change"/ For computer name insert "CLIENT1"/ for domain insert "mydomain.com"/ Then you can log into your admin or user account, lets do user (aglazier) pw (Password1)/ Then restart computer.<br/>
+<img src="https://i.imgur.com/JOIXmC2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/AlcmcOU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/HtG0Gt2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ZBZy4QI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/QBrQPbs.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+If you go to our DC desktop/ Go to "Active directory Users and Computers"/ Click the domain drop down and click on "computers" you can see Our client computer is connected to the domain.<br/>
+<img src="https://i.imgur.com/yQYadOf.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p align="center">
+Now lets go back to the Client1 desktop and check it/ CLick "other users"/ Login with user acc. info. (aglazier) (Password1)/ Open Command Prompt/ Type im "whoami" it should show youre connected to the domain.<br/>
+<img src="https://i.imgur.com/s9NHx8A.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
 
 
