@@ -1,6 +1,6 @@
 <h1>Active Directory Home Lab</h1>
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+ ### [YouTube Demonstration]()...In Progress.
 
 <h2>Description</h2>
 This guide provides step-by-step instructions on setting up a Domain Controller, creating 1,000 user accounts, and establishing a Internal Network Infrastructure. Designed to simulate a corporate environment, it leverages Oracle VirtualBox to run the lab, making it an ideal resource for IT professionals or aspiring administrators to gain hands-on experience with Active Directory, user management, and network configuration.
