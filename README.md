@@ -24,8 +24,7 @@ This guide provides step-by-step instructions on setting up a Domain Controller,
 This is a diagram of the environment we will be simulating: <br/>
 <img src="https://i.imgur.com/JVLb2sJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-<p align="center">
-Download Server 2019 and Windows 10 as ISO files to your desktop for later:<br/>
+<p>Download Server 2019 and Windows 10 as ISO files to your desktop for later:</p>
 <img src="https://i.imgur.com/NTO3kNu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <p align="center">
